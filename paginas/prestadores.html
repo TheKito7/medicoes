@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Prestadores | Orçamento Rápido
+    </title>
+
+    <link
+    rel="stylesheet"
+    href="../css/style.css"
+>
+
+<link
+    rel="stylesheet"
+    href="../css/prestadores.css"
+>
+
+<link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+>
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <div class="sidebar-topo">
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../imagens/logos/Grupo_Energisa.svg.webp"
+                    alt="Grupo Energisa"
+                >
+
+            </div>
+
+            <div class="sidebar-identificacao">
+
+                <strong>
+                    Orçamento Rápido
+                </strong>
+
+                <span>
+                    Gestão de Serviços
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+
+            <span class="menu-titulo">
+                Principal
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-grid-alt"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="nova-medicao.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-plus-circle"></i>
+
+                <span>
+                    Nova Medição
+                </span>
+
+            </a>
+
+
+            <a
+                href="medicoes.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-file"></i>
+
+                <span>
+                    Medições
+                </span>
+
+            </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Gestão
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-briefcase-alt-2"></i>
+
+                <span>
+                    Contratos
+                </span>
+
+            </a>
+
+
+            <a
+                href="prestadores.html"
+                class="menu-item ativo"
+                data-admin-only
+            >
+
+                <i class="bx bx-building-house"></i>
+
+                <span>
+                    Prestadores
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-table"></i>
+
+                <span>
+                    Tabela de preços
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-map"></i>
+
+                <span>
+                    Unidades
+                </span>
+
+            </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Administração
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-user"></i>
+
+                <span>
+                    Usuários
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-cog"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-rodape">
+
+            <div class="usuario-sidebar">
+
+                <div class="avatar-usuario">
+                    --
+                </div>
+
+                <div class="dados-usuario">
+
+                    <strong>
+                        Carregando...
+                    </strong>
+
+                    <span>
+                        ...
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-area">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="pagina-header">
+
+
+            <div class="header-esquerda">
+
+                <button
+                    id="btnMenuMobile"
+                    class="btn-menu-mobile"
+                    type="button"
+                >
+
+                    <i class="bx bx-menu"></i>
+
+                </button>
+
+
+                <div>
+
+                    <span>
+                        ORÇAMENTO RÁPIDO
+                    </span>
+
+                    <h1>
+                        Prestadores
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-direita">
+
+
+                <div class="header-usuario">
+
+                    <div class="header-avatar">
+                        --
+                    </div>
+
+                    <div class="header-dados-usuario">
+
+                        <strong>
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            ...
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="btnSair"
+                    class="btn-sair"
+                    type="button"
+                >
+
+                    <i class="bx bx-log-out"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <section class="pagina-conteudo">
+
+
+            <div class="prestadores-topo">
+
+
+                <div>
+
+                    <span class="subtitulo-pagina">
+                        GESTÃO DE PRESTADORES
+                    </span>
+
+                    <h2>
+                        Empresas e prestadores cadastrados
+                    </h2>
+
+                    <p>
+                        Gerencie os prestadores vinculados aos contratos e medições.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="btnNovoPrestador"
+                    class="btn-novo-prestador"
+                >
+
+                    <i class="bx bx-plus"></i>
+
+                    Novo prestador
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INDICADORES
+            ================================================== -->
+
+            <div class="indicadores-prestadores">
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-building-house"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="indicadorTotal">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-check-circle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Ativos
+                        </span>
+
+                        <strong id="indicadorAtivos">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-pause-circle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Inativos
+                        </span>
+
+                        <strong id="indicadorInativos">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-file"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Contratos vinculados
+                        </span>
+
+                        <strong id="indicadorContratos">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTROS
+            ================================================== -->
+
+            <div class="prestadores-filtros">
+
+
+                <div class="campo-pesquisa">
+
+                    <i class="bx bx-search"></i>
+
+                    <input
+                        type="search"
+                        id="inputPesquisa"
+                        placeholder="Pesquisar prestador..."
+                    >
+
+                </div>
+
+
+                <select id="filtroStatus">
+
+                    <option value="">
+                        Todos os status
+                    </option>
+
+                    <option value="ativo">
+                        Ativos
+                    </option>
+
+                    <option value="inativo">
+                        Inativos
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TABELA
+            ================================================== -->
+
+            <section class="prestadores-card">
+
+
+                <div class="prestadores-card-topo">
+
+                    <div>
+
+                        <h3>
+                            Prestadores cadastrados
+                        </h3>
+
+                        <p id="textoQuantidadePrestadores">
+                            Carregando...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="tabela-wrapper">
+
+
+                    <table class="tabela-prestadores">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Prestador
+                                </th>
+
+                                <th>
+                                    Razão Social
+                                </th>
+
+                                <th>
+                                    Documento
+                                </th>
+
+                                <th>
+                                    Contratos
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Ações
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="listaPrestadores">
+
+
+                            <tr>
+
+                                <td colspan="6">
+
+                                    <div class="estado-tabela">
+
+                                        <i class="bx bx-loader-alt bx-spin"></i>
+
+                                        Carregando prestadores...
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     OVERLAY SIDEBAR
+========================================================= -->
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+></div>
+
+
+
+<!-- =========================================================
+     MODAL
+========================================================= -->
+
+<div
+    id="modalPrestador"
+    class="modal-overlay oculto"
+>
+
+
+    <div class="modal-prestador">
+
+
+        <div class="modal-cabecalho">
+
+
+            <div>
+
+                <span>
+                    CADASTRO
+                </span>
+
+                <h3 id="tituloModal">
+                    Novo prestador
+                </h3>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnFecharModal"
+                class="btn-fechar-modal"
+            >
+
+                <i class="bx bx-x"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <form id="formPrestador">
+
+
+            <input
+                type="hidden"
+                id="prestadorId"
+            >
+
+
+            <div class="form-grid">
+
+
+                <div class="campo-form campo-form-grande">
+
+                    <label for="nomePrestador">
+                        Nome do prestador *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomePrestador"
+                        required
+                        placeholder="Ex.: Cássio"
+                    >
+
+                </div>
+
+
+                <div class="campo-form campo-form-grande">
+
+                    <label for="razaoSocial">
+                        Razão Social
+                    </label>
+
+                    <input
+                        type="text"
+                        id="razaoSocial"
+                        placeholder="Razão Social da empresa"
+                    >
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="documentoPrestador">
+                        CNPJ / CPF
+                    </label>
+
+                    <input
+                        type="text"
+                        id="documentoPrestador"
+                        placeholder="Documento"
+                    >
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="telefonePrestador">
+                        Telefone
+                    </label>
+
+                    <input
+                        type="text"
+                        id="telefonePrestador"
+                        placeholder="(79) 00000-0000"
+                    >
+
+                </div>
+
+
+                <div class="campo-form campo-form-grande">
+
+                    <label for="emailPrestador">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailPrestador"
+                        placeholder="contato@empresa.com.br"
+                    >
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="statusPrestador">
+                        Status
+                    </label>
+
+                    <select id="statusPrestador">
+
+                        <option value="true">
+                            Ativo
+                        </option>
+
+                        <option value="false">
+                            Inativo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="modal-acoes">
+
+
+                <button
+                    type="button"
+                    id="btnCancelar"
+                    class="btn-cancelar"
+                >
+
+                    Cancelar
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="btnSalvarPrestador"
+                    class="btn-salvar"
+                >
+
+                    <i class="bx bx-save"></i>
+
+                    Salvar prestador
+
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script
+    type="module"
+    src="../js/authGuard.js"
+></script>
+
+
+<script
+    type="module"
+    src="../js/prestadores.js"
+></script>
+
+
+</body>
+
+</html>

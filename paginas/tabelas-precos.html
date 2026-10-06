@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Tabela de Preços | Orçamento Rápido
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/tabelas-precos.css"
+    >
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <div class="sidebar-topo">
+
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../imagens/logos/Grupo_Energisa.svg.webp"
+                    alt="Grupo Energisa"
+                >
+
+            </div>
+
+
+            <div class="sidebar-identificacao">
+
+                <strong>
+                    Orçamento Rápido
+                </strong>
+
+                <span>
+                    Gestão de Serviços
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <nav class="sidebar-menu">
+
+
+            <span class="menu-titulo">
+                Principal
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-grid-alt"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="nova-medicao.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-plus-circle"></i>
+
+                <span>
+                    Nova Medição
+                </span>
+
+            </a>
+
+
+            <a
+                href="medicoes.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-file"></i>
+
+                <span>
+                    Medições
+                </span>
+
+            </a>
+
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Gestão
+            </span>
+
+
+            <a
+                href="contratos.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-briefcase-alt-2"></i>
+
+                <span>
+                    Contratos
+                </span>
+
+            </a>
+
+
+            <a
+                href="prestadores.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-building-house"></i>
+
+                <span>
+                    Prestadores
+                </span>
+
+            </a>
+
+
+            <a
+                href="tabelas-precos.html"
+                class="menu-item ativo"
+                data-admin-only
+            >
+
+                <i class="bx bx-table"></i>
+
+                <span>
+                    Tabela de preços
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-map"></i>
+
+                <span>
+                    Unidades
+                </span>
+
+            </a>
+
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Administração
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-user"></i>
+
+                <span>
+                    Usuários
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-cog"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <div class="sidebar-rodape">
+
+
+            <div class="usuario-sidebar">
+
+
+                <div class="avatar-usuario">
+                    --
+                </div>
+
+
+                <div class="dados-usuario">
+
+                    <strong>
+                        Carregando...
+                    </strong>
+
+                    <span>
+                        ...
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-area">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="pagina-header">
+
+
+            <div class="header-esquerda">
+
+
+                <button
+                    id="btnMenuMobile"
+                    class="btn-menu-mobile"
+                    type="button"
+                >
+
+                    <i class="bx bx-menu"></i>
+
+                </button>
+
+
+                <div>
+
+                    <span>
+                        ORÇAMENTO RÁPIDO
+                    </span>
+
+                    <h1>
+                        Tabela de preços
+                    </h1>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="header-direita">
+
+
+                <div class="header-usuario">
+
+
+                    <div class="header-avatar">
+                        --
+                    </div>
+
+
+                    <div class="header-dados-usuario">
+
+                        <strong>
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            ...
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    id="btnSair"
+                    class="btn-sair"
+                    type="button"
+                    title="Sair"
+                >
+
+                    <i class="bx bx-log-out"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <section class="pagina-conteudo">
+
+
+            <!-- =================================================
+                 TOPO
+            ================================================== -->
+
+            <div class="tabelas-topo">
+
+
+                <div>
+
+                    <span class="subtitulo-pagina">
+                        GESTÃO DE PREÇOS
+                    </span>
+
+                    <h2>
+                        Tabelas contratuais
+                    </h2>
+
+                    <p>
+                        Consulte preços, serviços e versões vinculadas aos contratos.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INDICADORES
+            ================================================== -->
+
+            <div class="indicadores-tabelas">
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-table"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Tabelas
+                        </span>
+
+                        <strong id="indicadorTabelas">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-check-circle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Ativas
+                        </span>
+
+                        <strong id="indicadorAtivas">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-list-ul"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Itens cadastrados
+                        </span>
+
+                        <strong id="indicadorItens">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-briefcase-alt-2"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Contratos vinculados
+                        </span>
+
+                        <strong id="indicadorContratos">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTROS
+            ================================================== -->
+
+            <div class="tabelas-filtros">
+
+
+                <div class="campo-pesquisa">
+
+                    <i class="bx bx-search"></i>
+
+                    <input
+                        type="search"
+                        id="inputPesquisaTabela"
+                        placeholder="Pesquisar tabela, contrato ou prestador..."
+                    >
+
+                </div>
+
+
+                <select id="filtroStatusTabela">
+
+                    <option value="">
+                        Todos os status
+                    </option>
+
+                    <option value="ativa">
+                        Ativas
+                    </option>
+
+                    <option value="inativa">
+                        Inativas
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LISTA DE TABELAS
+            ================================================== -->
+
+            <section class="card-tabelas">
+
+
+                <div class="card-tabelas-topo">
+
+
+                    <div>
+
+                        <h3>
+                            Tabelas cadastradas
+                        </h3>
+
+                        <p id="textoQuantidadeTabelas">
+                            Carregando...
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="tabela-wrapper">
+
+
+                    <table class="tabela-tabelas">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Tabela
+                                </th>
+
+                                <th>
+                                    Contrato
+                                </th>
+
+                                <th>
+                                    Prestador
+                                </th>
+
+                                <th>
+                                    Versão
+                                </th>
+
+                                <th>
+                                    Itens
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Ações
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="listaTabelas">
+
+
+                            <tr>
+
+                                <td colspan="7">
+
+                                    <div class="estado-tabela">
+
+                                        <i class="bx bx-loader-alt bx-spin"></i>
+
+                                        Carregando tabelas...
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     OVERLAY SIDEBAR
+========================================================= -->
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+></div>
+
+
+
+<!-- =========================================================
+     MODAL ITENS
+========================================================= -->
+
+<div
+    id="modalItens"
+    class="modal-overlay oculto"
+>
+
+
+    <div class="modal-itens">
+
+
+        <div class="modal-cabecalho">
+
+
+            <div>
+
+                <span>
+                    TABELA DE PREÇOS
+                </span>
+
+                <h3 id="tituloModalItens">
+                    Serviços da tabela
+                </h3>
+
+                <p id="subtituloModalItens">
+                    -
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnFecharItens"
+                class="btn-fechar-modal"
+            >
+
+                <i class="bx bx-x"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="modal-itens-conteudo">
+
+
+            <div class="barra-itens">
+
+
+                <div class="campo-pesquisa campo-pesquisa-itens">
+
+                    <i class="bx bx-search"></i>
+
+                    <input
+                        type="search"
+                        id="inputPesquisaItem"
+                        placeholder="Pesquisar código, PINI ou descrição..."
+                    >
+
+                </div>
+
+
+                <span id="contadorItensModal">
+                    0 itens
+                </span>
+
+
+            </div>
+
+
+
+            <div class="tabela-itens-wrapper">
+
+
+                <table class="tabela-itens-precos">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Cód. Energisa
+                            </th>
+
+                            <th>
+                                PINI
+                            </th>
+
+                            <th>
+                                Serviço
+                            </th>
+
+                            <th>
+                                Unid.
+                            </th>
+
+                            <th>
+                                MAT
+                            </th>
+
+                            <th>
+                                MO
+                            </th>
+
+                            <th>
+                                Valor Unit.
+                            </th>
+
+                            <th>
+                                Ações
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="listaItensTabela">
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     MODAL EDITAR ITEM
+========================================================= -->
+
+<div
+    id="modalEditarItem"
+    class="modal-overlay oculto"
+>
+
+
+    <div class="modal-item">
+
+
+        <div class="modal-cabecalho">
+
+
+            <div>
+
+                <span>
+                    ITEM DA TABELA
+                </span>
+
+                <h3>
+                    Editar serviço
+                </h3>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnFecharEditarItem"
+                class="btn-fechar-modal"
+            >
+
+                <i class="bx bx-x"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <form id="formEditarItem">
+
+
+            <input
+                type="hidden"
+                id="itemId"
+            >
+
+
+            <div class="form-grid-item">
+
+
+                <div class="campo-form">
+
+                    <label for="itemCodigoEnergisa">
+                        Código Energisa
+                    </label>
+
+                    <input
+                        type="text"
+                        id="itemCodigoEnergisa"
+                    >
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="itemCodigoPini">
+                        Código PINI
+                    </label>
+
+                    <input
+                        type="text"
+                        id="itemCodigoPini"
+                    >
+
+                </div>
+
+
+                <div class="campo-form campo-form-grande">
+
+                    <label for="itemEspecificacao">
+                        Especificação do serviço *
+                    </label>
+
+                    <textarea
+                        id="itemEspecificacao"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="itemUnidade">
+                        Unidade
+                    </label>
+
+                    <input
+                        type="text"
+                        id="itemUnidade"
+                    >
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="itemQuantidadeEstimada">
+                        Quantidade estimada
+                    </label>
+
+                    <input
+                        type="number"
+                        step="0.01"
+                        id="itemQuantidadeEstimada"
+                    >
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="itemMat">
+                        MAT
+                    </label>
+
+                    <input
+                        type="number"
+                        step="0.01"
+                        id="itemMat"
+                    >
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="itemMo">
+                        MO
+                    </label>
+
+                    <input
+                        type="number"
+                        step="0.01"
+                        id="itemMo"
+                    >
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="itemValorUnitario">
+                        Valor unitário *
+                    </label>
+
+                    <input
+                        type="number"
+                        step="0.01"
+                        min="0"
+                        id="itemValorUnitario"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-form">
+
+                    <label for="itemTotalEstimado">
+                        Total estimado
+                    </label>
+
+                    <input
+                        type="number"
+                        step="0.01"
+                        id="itemTotalEstimado"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="modal-acoes">
+
+
+                <button
+                    type="button"
+                    id="btnCancelarEditarItem"
+                    class="btn-cancelar"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="btnSalvarItem"
+                    class="btn-salvar"
+                >
+
+                    <i class="bx bx-save"></i>
+
+                    Salvar item
+
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script
+    type="module"
+    src="../js/authGuard.js"
+></script>
+
+
+<script
+    type="module"
+    src="../js/tabelasPrecos.js"
+></script>
+
+
+</body>
+
+</html>

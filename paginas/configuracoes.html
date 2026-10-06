@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Configurações | Orçamento Rápido
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/configuracoes.css"
+    >
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <div class="sidebar-topo">
+
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../imagens/logos/Grupo_Energisa.svg.webp"
+                    alt="Grupo Energisa"
+                >
+
+            </div>
+
+
+            <div class="sidebar-identificacao">
+
+                <strong>
+                    Orçamento Rápido
+                </strong>
+
+                <span>
+                    Gestão de Serviços
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <nav class="sidebar-menu">
+
+
+            <span class="menu-titulo">
+                Principal
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-grid-alt"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="nova-medicao.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-plus-circle"></i>
+
+                <span>
+                    Nova Medição
+                </span>
+
+            </a>
+
+
+            <a
+                href="medicoes.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-file"></i>
+
+                <span>
+                    Medições
+                </span>
+
+            </a>
+
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Gestão
+            </span>
+
+
+            <a
+                href="contratos.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-briefcase-alt-2"></i>
+
+                <span>
+                    Contratos
+                </span>
+
+            </a>
+
+
+            <a
+                href="prestadores.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-building-house"></i>
+
+                <span>
+                    Prestadores
+                </span>
+
+            </a>
+
+
+            <a
+                href="tabelas-precos.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-table"></i>
+
+                <span>
+                    Tabela de preços
+                </span>
+
+            </a>
+
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Administração
+            </span>
+
+
+            <a
+                href="usuarios.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-user"></i>
+
+                <span>
+                    Usuários
+                </span>
+
+            </a>
+
+
+            <a
+                href="configuracoes.html"
+                class="menu-item ativo"
+                data-admin-only
+            >
+
+                <i class="bx bx-cog"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <div class="sidebar-rodape">
+
+
+            <div class="usuario-sidebar">
+
+
+                <div class="avatar-usuario">
+                    --
+                </div>
+
+
+                <div class="dados-usuario">
+
+                    <strong>
+                        Carregando...
+                    </strong>
+
+                    <span>
+                        ...
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-area">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="pagina-header">
+
+
+            <div class="header-esquerda">
+
+
+                <button
+                    id="btnMenuMobile"
+                    class="btn-menu-mobile"
+                    type="button"
+                >
+
+                    <i class="bx bx-menu"></i>
+
+                </button>
+
+
+                <div>
+
+                    <span>
+                        ORÇAMENTO RÁPIDO
+                    </span>
+
+                    <h1>
+                        Configurações
+                    </h1>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="header-direita">
+
+
+                <div class="header-usuario">
+
+
+                    <div class="header-avatar">
+                        --
+                    </div>
+
+
+                    <div class="header-dados-usuario">
+
+                        <strong>
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            ...
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    id="btnSair"
+                    class="btn-sair"
+                    type="button"
+                >
+
+                    <i class="bx bx-log-out"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <section class="pagina-conteudo">
+
+
+            <div class="configuracoes-topo">
+
+
+                <span class="subtitulo-pagina">
+                    ADMINISTRAÇÃO
+                </span>
+
+
+                <h2>
+                    Configurações do sistema
+                </h2>
+
+
+                <p>
+                    Gerencie informações gerais e acompanhe parâmetros operacionais do Orçamento Rápido.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INDICADORES
+            ================================================== -->
+
+            <div class="indicadores-configuracoes">
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-file"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Medições
+                        </span>
+
+                        <strong id="indicadorMedicoes">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-building-house"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Prestadores
+                        </span>
+
+                        <strong id="indicadorPrestadores">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-briefcase-alt-2"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Contratos
+                        </span>
+
+                        <strong id="indicadorContratos">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Usuários
+                        </span>
+
+                        <strong id="indicadorUsuarios">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 GRID PRINCIPAL
+            ================================================== -->
+
+            <div class="configuracoes-grid">
+
+
+                <!-- =============================================
+                     CONFIGURAÇÕES GERAIS
+                ============================================== -->
+
+                <section class="config-card config-card-principal">
+
+
+                    <div class="config-card-cabecalho">
+
+
+                        <div class="config-card-icone">
+
+                            <i class="bx bx-slider-alt"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                GERAL
+                            </span>
+
+                            <h3>
+                                Identificação do sistema
+                            </h3>
+
+                            <p>
+                                Informações institucionais utilizadas pelo Orçamento Rápido.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <form id="formConfiguracoes">
+
+
+                        <div class="form-grid">
+
+
+                            <div class="campo-form campo-form-grande">
+
+                                <label for="nomeSistema">
+                                    Nome do sistema
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nomeSistema"
+                                    placeholder="Orçamento Rápido"
+                                >
+
+                            </div>
+
+
+
+                            <div class="campo-form campo-form-grande">
+
+                                <label for="empresaSistema">
+                                    Empresa
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="empresaSistema"
+                                    placeholder="Grupo Energisa"
+                                >
+
+                            </div>
+
+
+
+                            <div class="campo-form campo-form-grande">
+
+                                <label for="subtituloSistema">
+                                    Subtítulo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="subtituloSistema"
+                                    placeholder="Gestão de Serviços"
+                                >
+
+                            </div>
+
+
+
+                            <div class="campo-form">
+
+                                <label for="prefixoMedicao">
+                                    Prefixo das medições
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="prefixoMedicao"
+                                    maxlength="10"
+                                    placeholder="MED"
+                                >
+
+                                <small>
+                                    Atualmente utilizado apenas como configuração do sistema.
+                                </small>
+
+                            </div>
+
+
+
+                            <div class="campo-form">
+
+                                <label for="anoReferencia">
+                                    Ano de referência
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="anoReferencia"
+                                    disabled
+                                >
+
+                                <small>
+                                    Obtido automaticamente do contador de medições.
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="form-acoes">
+
+
+                            <button
+                                type="submit"
+                                id="btnSalvarConfiguracoes"
+                                class="btn-salvar"
+                            >
+
+                                <i class="bx bx-save"></i>
+
+                                Salvar configurações
+
+                            </button>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </section>
+
+
+
+                <!-- =============================================
+                     NUMERAÇÃO
+                ============================================== -->
+
+                <section class="config-card">
+
+
+                    <div class="config-card-cabecalho">
+
+
+                        <div class="config-card-icone">
+
+                            <i class="bx bx-hash"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                CONTROLE
+                            </span>
+
+                            <h3>
+                                Numeração das medições
+                            </h3>
+
+                            <p>
+                                Situação atual do contador automático.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="contador-box">
+
+
+                        <div class="contador-linha">
+
+                            <span>
+                                Ano
+                            </span>
+
+                            <strong id="contadorAno">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="contador-linha">
+
+                            <span>
+                                Último número
+                            </span>
+
+                            <strong id="contadorUltimoNumero">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="contador-linha contador-destaque">
+
+                            <span>
+                                Próxima medição
+                            </span>
+
+                            <strong id="contadorProximaMedicao">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="aviso-configuracao">
+
+                        <i class="bx bx-shield-quarter"></i>
+
+                        <div>
+
+                            <strong>
+                                Contador protegido
+                            </strong>
+
+                            <span>
+                                A numeração não pode ser zerada por esta tela para preservar a sequência das medições.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =============================================
+                     AMBIENTE
+                ============================================== -->
+
+                <section class="config-card">
+
+
+                    <div class="config-card-cabecalho">
+
+
+                        <div class="config-card-icone">
+
+                            <i class="bx bx-data"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                BANCO DE DADOS
+                            </span>
+
+                            <h3>
+                                Estrutura operacional
+                            </h3>
+
+                            <p>
+                                Coleções principais utilizadas pelo sistema.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="colecoes-lista">
+
+
+                        <div class="colecao-item">
+
+                            <i class="bx bx-check-circle"></i>
+
+                            <span>
+                                usuarios
+                            </span>
+
+                        </div>
+
+
+                        <div class="colecao-item">
+
+                            <i class="bx bx-check-circle"></i>
+
+                            <span>
+                                prestadores
+                            </span>
+
+                        </div>
+
+
+                        <div class="colecao-item">
+
+                            <i class="bx bx-check-circle"></i>
+
+                            <span>
+                                contratos
+                            </span>
+
+                        </div>
+
+
+                        <div class="colecao-item">
+
+                            <i class="bx bx-check-circle"></i>
+
+                            <span>
+                                tabelasPrecos
+                            </span>
+
+                        </div>
+
+
+                        <div class="colecao-item">
+
+                            <i class="bx bx-check-circle"></i>
+
+                            <span>
+                                medicoes
+                            </span>
+
+                        </div>
+
+
+                        <div class="colecao-item">
+
+                            <i class="bx bx-check-circle"></i>
+
+                            <span>
+                                analisesMedicoes
+                            </span>
+
+                        </div>
+
+
+                        <div class="colecao-item">
+
+                            <i class="bx bx-check-circle"></i>
+
+                            <span>
+                                contadores
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =============================================
+                     ÚLTIMA ATUALIZAÇÃO
+                ============================================== -->
+
+                <section class="config-card">
+
+
+                    <div class="config-card-cabecalho">
+
+
+                        <div class="config-card-icone">
+
+                            <i class="bx bx-history"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                AUDITORIA
+                            </span>
+
+                            <h3>
+                                Última alteração
+                            </h3>
+
+                            <p>
+                                Informações sobre a última atualização das configurações.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="auditoria-config">
+
+
+                        <div>
+
+                            <span>
+                                Responsável
+                            </span>
+
+                            <strong id="configAtualizadoPor">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Data
+                            </span>
+
+                            <strong id="configAtualizadoEm">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+></div>
+
+
+
+<script
+    type="module"
+    src="../js/authGuard.js"
+></script>
+
+
+<script
+    type="module"
+    src="../js/configuracoes.js"
+></script>
+
+
+</body>
+
+</html>
+

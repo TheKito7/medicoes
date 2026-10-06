@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Análise da Medição | Orçamento Rápido
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/medicoes.css"
+    >
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <div class="sidebar-topo">
+
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../imagens/logos/Grupo_Energisa.svg.webp"
+                    alt="Grupo Energisa"
+                >
+
+            </div>
+
+
+            <div class="sidebar-identificacao">
+
+                <strong>
+                    Orçamento Rápido
+                </strong>
+
+                <span>
+                    Gestão de Serviços
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+
+            <span class="menu-titulo">
+                Principal
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-grid-alt"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="nova-medicao.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-plus-circle"></i>
+
+                <span>
+                    Nova Medição
+                </span>
+
+            </a>
+
+
+            <a
+                href="medicoes.html"
+                class="menu-item ativo"
+            >
+
+                <i class="bx bx-file"></i>
+
+                <span>
+                    Medições
+                </span>
+
+            </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Gestão
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-briefcase-alt-2"></i>
+
+                <span>
+                    Contratos
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-building-house"></i>
+
+                <span>
+                    Prestadores
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-table"></i>
+
+                <span>
+                    Tabela de preços
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-map"></i>
+
+                <span>
+                    Unidades
+                </span>
+
+            </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Administração
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-user"></i>
+
+                <span>
+                    Usuários
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-cog"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-rodape">
+
+
+            <div class="usuario-sidebar">
+
+
+                <div class="avatar-usuario">
+                    --
+                </div>
+
+
+                <div class="dados-usuario">
+
+                    <strong>
+                        Carregando...
+                    </strong>
+
+                    <span>
+                        ...
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-area">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="pagina-header">
+
+
+            <div class="header-esquerda">
+
+
+                <button
+                    id="btnMenuMobile"
+                    class="btn-menu-mobile"
+                    type="button"
+                >
+
+                    <i class="bx bx-menu"></i>
+
+                </button>
+
+
+                <div>
+
+                    <span>
+                        ORÇAMENTO RÁPIDO
+                    </span>
+
+                    <h1>
+                        Análise da Medição
+                    </h1>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="header-direita">
+
+
+                <div class="header-usuario">
+
+
+                    <div class="header-avatar">
+                        --
+                    </div>
+
+
+                    <div class="header-dados-usuario">
+
+                        <strong>
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            ...
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    id="btnSair"
+                    class="btn-sair"
+                    type="button"
+                    title="Sair"
+                >
+
+                    <i class="bx bx-log-out"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <section class="pagina-conteudo">
+
+
+            <div class="detalhes-pagina detalhes-pagina-integrada">
+
+
+                <!-- =================================================
+                     TOPO
+                ================================================== -->
+
+                <div class="detalhes-topo">
+
+
+                    <a
+                        href="medicoes.html"
+                        class="btn-voltar"
+                    >
+
+                        <i class="bx bx-arrow-back"></i>
+
+                        Voltar para medições
+
+                    </a>
+
+
+                    <div>
+
+                        <span>
+                            CONFERÊNCIA E ANÁLISE
+                        </span>
+
+                        <h1 id="tituloNumeroMedicao">
+                            Carregando...
+                        </h1>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CARREGAMENTO
+                ================================================== -->
+
+                <section
+                    id="carregandoDetalhes"
+                    class="detalhes-card"
+                >
+
+                    Carregando medição...
+
+                </section>
+
+
+
+                <!-- =================================================
+                     CONTEÚDO DA MEDIÇÃO
+                ================================================== -->
+
+                <div
+                    id="conteudoDetalhes"
+                    class="oculto"
+                >
+
+
+                    <!-- =============================================
+                         DADOS GERAIS
+                    ============================================== -->
+
+                    <section class="detalhes-card">
+
+
+                        <div class="detalhes-cabecalho">
+
+
+                            <div>
+
+                                <span>
+                                    MEDIÇÃO
+                                </span>
+
+                                <h2 id="detalheContrato">
+                                    -
+                                </h2>
+
+                            </div>
+
+
+                            <span
+                                id="detalheStatus"
+                                class="status-medicao"
+                            >
+                                -
+                            </span>
+
+
+                        </div>
+
+
+
+                        <div class="detalhes-grid">
+
+
+                            <div>
+
+                                <span>
+                                    Número da medição
+                                </span>
+
+                                <strong id="detalheNumero">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Prestador
+                                </span>
+
+                                <strong id="detalhePrestador">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Data do serviço
+                                </span>
+
+                                <strong id="detalheData">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Cidade
+                                </span>
+
+                                <strong id="detalheCidade">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Localidade / Unidade
+                                </span>
+
+                                <strong id="detalheLocalidade">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Responsável pela solicitação
+                                </span>
+
+                                <strong id="detalheResponsavel">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Criado por
+                                </span>
+
+                                <strong id="detalheCriadoPor">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Quantidade de itens
+                                </span>
+
+                                <strong id="detalheQuantidadeResumo">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Valor da medição
+                                </span>
+
+                                <strong id="detalheValorResumo">
+                                    R$ 0,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="detalhe-descricao">
+
+                            <span>
+                                Descrição geral
+                            </span>
+
+                            <p id="detalheDescricao">
+                                -
+                            </p>
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =============================================
+                         RETORNO
+                    ============================================== -->
+
+                    <section
+                        id="secaoRetorno"
+                        class="detalhes-card retorno-medicao oculto"
+                    >
+
+
+                        <div class="titulo-secao">
+
+
+                            <div>
+
+                                <h3>
+                                    Retorno da análise
+                                </h3>
+
+                                <p>
+                                    Informação registrada pela equipe responsável.
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div
+                            id="mensagemRetorno"
+                            class="mensagem-retorno"
+                        ></div>
+
+
+                    </section>
+
+
+
+                    <!-- =============================================
+                         SERVIÇOS
+                    ============================================== -->
+
+                    <section class="detalhes-card">
+
+
+                        <div class="titulo-secao">
+
+
+                            <div>
+
+                                <h3>
+                                    Serviços executados
+                                </h3>
+
+                                <p>
+                                    Itens registrados pelo prestador.
+                                </p>
+
+                            </div>
+
+
+                            <span id="detalheQuantidadeItens">
+                                0 itens
+                            </span>
+
+
+                        </div>
+
+
+
+                        <div class="tabela-wrapper">
+
+
+                            <table class="tabela-itens">
+
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>
+                                            Código
+                                        </th>
+
+                                        <th>
+                                            Serviço
+                                        </th>
+
+                                        <th>
+                                            Unidade
+                                        </th>
+
+                                        <th>
+                                            Quantidade
+                                        </th>
+
+                                        <th>
+                                            Valor unitário
+                                        </th>
+
+                                        <th>
+                                            Total
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="detalheItens">
+                                </tbody>
+
+
+                            </table>
+
+
+                        </div>
+
+
+
+                        <div class="detalhe-total">
+
+                            <span>
+                                Valor total
+                            </span>
+
+                            <strong id="detalheValorTotal">
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =============================================
+                         ANÁLISE ADMINISTRATIVA
+                    ============================================== -->
+
+                    <section
+                        id="secaoAnaliseAdministrativa"
+                        class="detalhes-card oculto"
+                    >
+
+
+                        <div class="titulo-secao titulo-analise">
+
+
+                            <div>
+
+                                <h3>
+                                    Análise administrativa
+                                </h3>
+
+                                <p>
+                                    Dados internos utilizados para conferência e geração da medição final.
+                                </p>
+
+                            </div>
+
+
+                            <span class="badge-interno">
+                                USO INTERNO
+                            </span>
+
+
+                        </div>
+
+
+
+                        <div
+                            id="mensagemFluxoAnalise"
+                            class="mensagem-fluxo"
+                        >
+                        </div>
+
+
+
+                        <!-- =========================================
+                             INICIAR ANÁLISE
+                        ========================================== -->
+
+                        <div
+                            id="areaIniciarAnalise"
+                            class="area-iniciar-analise oculto"
+                        >
+
+
+                            <button
+                                type="button"
+                                id="btnIniciarAnalise"
+                                class="btn-acao btn-iniciar-analise"
+                            >
+
+                                <i class="bx bx-search-alt"></i>
+
+                                Iniciar análise
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <!-- =========================================
+                             DADOS INTERNOS
+                        ========================================== -->
+
+                        <div
+                            id="areaDadosInternos"
+                            class="area-dados-internos oculto"
+                        >
+
+
+                            <div class="cabecalho-dados-internos">
+
+
+                                <div>
+
+                                    <h4>
+                                        Classificação dos serviços
+                                    </h4>
+
+                                    <p>
+                                        Preencha os dados administrativos de cada item.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    id="btnSalvarDadosInternos"
+                                    class="btn-salvar-interno"
+                                >
+
+                                    <i class="bx bx-save"></i>
+
+                                    Salvar dados internos
+
+                                </button>
+
+
+                            </div>
+
+
+
+                            <div
+                                id="listaDadosInternos"
+                                class="lista-dados-internos"
+                            >
+                            </div>
+
+
+
+                            <div class="campo-observacao-analise">
+
+
+                                <label for="observacaoAnalise">
+
+                                    Observação da análise
+
+                                </label>
+
+
+                                <textarea
+                                    id="observacaoAnalise"
+                                    rows="4"
+                                    placeholder="Informe observações, pendências ou justificativas..."
+                                ></textarea>
+
+
+                                <small>
+
+                                    Obrigatória para solicitar correção ou reprovar uma medição.
+
+                                </small>
+
+
+                            </div>
+
+
+
+                            <div
+                                id="acoesAnalise"
+                                class="acoes-analise"
+                            >
+
+
+                                <button
+                                    type="button"
+                                    id="btnSolicitarCorrecao"
+                                    class="btn-acao btn-correcao"
+                                >
+
+                                    <i class="bx bx-edit-alt"></i>
+
+                                    Solicitar correção
+
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    id="btnReprovar"
+                                    class="btn-acao btn-reprovar"
+                                >
+
+                                    <i class="bx bx-x-circle"></i>
+
+                                    Reprovar
+
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    id="btnAprovar"
+                                    class="btn-acao btn-aprovar"
+                                >
+
+                                    <i class="bx bx-check-circle"></i>
+
+                                    Aprovar medição
+
+                                </button>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =========================================
+                             AUDITORIA
+                        ========================================== -->
+
+                        <div
+                            id="dadosAuditoria"
+                            class="dados-auditoria oculto"
+                        >
+
+
+                            <div>
+
+                                <span>
+                                    Responsável pela análise
+                                </span>
+
+                                <strong id="auditoriaNome">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Última atualização
+                                </span>
+
+                                <strong id="auditoriaData">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =========================================
+                             GERAR EXCEL
+                        ========================================== -->
+
+                        <div
+                            id="areaGerarExcel"
+                            class="area-gerar-excel oculto"
+                        >
+
+
+                            <div>
+
+                                <span>
+                                    MEDIÇÃO APROVADA
+                                </span>
+
+                                <strong>
+                                    Planilha final disponível
+                                </strong>
+
+                                <p>
+                                    Gere o arquivo Excel utilizando o modelo padrão da medição.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                id="btnGerarExcel"
+                                class="btn-gerar-excel"
+                            >
+
+                                <i class="bx bx-spreadsheet"></i>
+
+                                Gerar Excel
+
+                            </button>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+></div>
+
+
+
+<!-- =========================================================
+     EXCELJS
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"
+></script>
+
+
+
+<!-- =========================================================
+     FIREBASE / SISTEMA
+========================================================= -->
+
+<script
+    type="module"
+    src="../js/authGuard.js"
+></script>
+
+
+<script
+    type="module"
+    src="../js/detalhes-medicao.js"
+></script>
+
+
+</body>
+
+</html>

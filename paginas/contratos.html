@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Contratos | Orçamento Rápido
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/contratos.css"
+    >
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <div class="sidebar-topo">
+
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../imagens/logos/Grupo_Energisa.svg.webp"
+                    alt="Grupo Energisa"
+                >
+
+            </div>
+
+
+            <div class="sidebar-identificacao">
+
+                <strong>
+                    Orçamento Rápido
+                </strong>
+
+                <span>
+                    Gestão de Serviços
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <nav class="sidebar-menu">
+
+
+            <span class="menu-titulo">
+                Principal
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-grid-alt"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="nova-medicao.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-plus-circle"></i>
+
+                <span>
+                    Nova Medição
+                </span>
+
+            </a>
+
+
+            <a
+                href="medicoes.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-file"></i>
+
+                <span>
+                    Medições
+                </span>
+
+            </a>
+
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Gestão
+            </span>
+
+
+            <a
+                href="contratos.html"
+                class="menu-item ativo"
+                data-admin-only
+            >
+
+                <i class="bx bx-briefcase-alt-2"></i>
+
+                <span>
+                    Contratos
+                </span>
+
+            </a>
+
+
+            <a
+                href="prestadores.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-building-house"></i>
+
+                <span>
+                    Prestadores
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-table"></i>
+
+                <span>
+                    Tabela de preços
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-map"></i>
+
+                <span>
+                    Unidades
+                </span>
+
+            </a>
+
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Administração
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-user"></i>
+
+                <span>
+                    Usuários
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-cog"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <div class="sidebar-rodape">
+
+
+            <div class="usuario-sidebar">
+
+
+                <div class="avatar-usuario">
+                    --
+                </div>
+
+
+                <div class="dados-usuario">
+
+                    <strong>
+                        Carregando...
+                    </strong>
+
+                    <span>
+                        ...
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-area">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="pagina-header">
+
+
+            <div class="header-esquerda">
+
+
+                <button
+                    id="btnMenuMobile"
+                    class="btn-menu-mobile"
+                    type="button"
+                >
+
+                    <i class="bx bx-menu"></i>
+
+                </button>
+
+
+                <div>
+
+                    <span>
+                        ORÇAMENTO RÁPIDO
+                    </span>
+
+                    <h1>
+                        Contratos
+                    </h1>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="header-direita">
+
+
+                <div class="header-usuario">
+
+
+                    <div class="header-avatar">
+                        --
+                    </div>
+
+
+                    <div class="header-dados-usuario">
+
+                        <strong>
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            ...
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    id="btnSair"
+                    class="btn-sair"
+                    type="button"
+                    title="Sair"
+                >
+
+                    <i class="bx bx-log-out"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <section class="pagina-conteudo">
+
+
+            <!-- =================================================
+                 TOPO
+            ================================================== -->
+
+            <div class="contratos-topo">
+
+
+                <div>
+
+                    <span class="subtitulo-pagina">
+                        GESTÃO DE CONTRATOS
+                    </span>
+
+                    <h2>
+                        Contratos cadastrados
+                    </h2>
+
+                    <p>
+                        Gerencie os contratos, prestadores e tabelas de preços utilizados nas medições.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="btnNovoContrato"
+                    class="btn-novo-contrato"
+                >
+
+                    <i class="bx bx-plus"></i>
+
+                    Novo contrato
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INDICADORES
+            ================================================== -->
+
+            <div class="indicadores-contratos">
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-briefcase-alt-2"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="indicadorTotal">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-check-circle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Ativos
+                        </span>
+
+                        <strong id="indicadorAtivos">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-pause-circle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Inativos
+                        </span>
+
+                        <strong id="indicadorInativos">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-file"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Medições vinculadas
+                        </span>
+
+                        <strong id="indicadorMedicoes">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTROS
+            ================================================== -->
+
+            <div class="contratos-filtros">
+
+
+                <div class="campo-pesquisa">
+
+                    <i class="bx bx-search"></i>
+
+                    <input
+                        type="search"
+                        id="inputPesquisa"
+                        placeholder="Pesquisar contrato, descrição ou prestador..."
+                    >
+
+                </div>
+
+
+                <select id="filtroPrestador">
+
+                    <option value="">
+                        Todos os prestadores
+                    </option>
+
+                </select>
+
+
+                <select id="filtroStatus">
+
+                    <option value="">
+                        Todos os status
+                    </option>
+
+                    <option value="ativo">
+                        Ativos
+                    </option>
+
+                    <option value="inativo">
+                        Inativos
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TABELA
+            ================================================== -->
+
+            <section class="contratos-card">
+
+
+                <div class="contratos-card-topo">
+
+                    <div>
+
+                        <h3>
+                            Contratos
+                        </h3>
+
+                        <p id="textoQuantidadeContratos">
+                            Carregando...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="tabela-wrapper">
+
+
+                    <table class="tabela-contratos">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Contrato
+                                </th>
+
+                                <th>
+                                    Descrição
+                                </th>
+
+                                <th>
+                                    Prestador
+                                </th>
+
+                                <th>
+                                    Tabela de preços
+                                </th>
+
+                                <th>
+                                    Medições
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Ações
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="listaContratos">
+
+
+                            <tr>
+
+                                <td colspan="7">
+
+                                    <div class="estado-tabela">
+
+                                        <i class="bx bx-loader-alt bx-spin"></i>
+
+                                        Carregando contratos...
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     OVERLAY SIDEBAR
+========================================================= -->
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+></div>
+
+
+
+<!-- =========================================================
+     MODAL CONTRATO
+========================================================= -->
+
+<div
+    id="modalContrato"
+    class="modal-overlay oculto"
+>
+
+
+    <div class="modal-contrato">
+
+
+        <div class="modal-cabecalho">
+
+
+            <div>
+
+                <span>
+                    CONTRATO
+                </span>
+
+                <h3 id="tituloModal">
+                    Novo contrato
+                </h3>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnFecharModal"
+                class="btn-fechar-modal"
+            >
+
+                <i class="bx bx-x"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <form id="formContrato">
+
+
+            <input
+                type="hidden"
+                id="contratoId"
+            >
+
+
+
+            <div class="form-grid">
+
+
+                <div class="campo-form">
+
+                    <label for="numeroContrato">
+                        Número do contrato *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="numeroContrato"
+                        required
+                        placeholder="Ex.: 2025001101"
+                    >
+
+                    <small id="ajudaNumeroContrato">
+                        O número será utilizado para identificar o contrato.
+                    </small>
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="statusContrato">
+                        Status
+                    </label>
+
+                    <select id="statusContrato">
+
+                        <option value="true">
+                            Ativo
+                        </option>
+
+                        <option value="false">
+                            Inativo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="campo-form campo-form-grande">
+
+                    <label for="descricaoContrato">
+                        Descrição *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="descricaoContrato"
+                        required
+                        placeholder="Ex.: Manutenção Predial"
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="prestadorContrato">
+                        Prestador *
+                    </label>
+
+                    <select
+                        id="prestadorContrato"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione...
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="tabelaContrato">
+                        Tabela de preços
+                    </label>
+
+                    <select id="tabelaContrato">
+
+                        <option value="">
+                            Sem tabela vinculada
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                id="resumoVinculo"
+                class="resumo-vinculo oculto"
+            >
+
+
+                <div>
+
+                    <i class="bx bx-link-alt"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        VÍNCULO DO CONTRATO
+                    </span>
+
+                    <strong id="resumoVinculoTexto">
+                        -
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="modal-acoes">
+
+
+                <button
+                    type="button"
+                    id="btnCancelar"
+                    class="btn-cancelar"
+                >
+
+                    Cancelar
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="btnSalvarContrato"
+                    class="btn-salvar"
+                >
+
+                    <i class="bx bx-save"></i>
+
+                    Salvar contrato
+
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script
+    type="module"
+    src="../js/authGuard.js"
+></script>
+
+
+<script
+    type="module"
+    src="../js/contratos.js"
+></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Usuários | Orçamento Rápido
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/usuarios.css"
+    >
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <div class="sidebar-topo">
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../imagens/logos/Grupo_Energisa.svg.webp"
+                    alt="Grupo Energisa"
+                >
+
+            </div>
+
+
+            <div class="sidebar-identificacao">
+
+                <strong>
+                    Orçamento Rápido
+                </strong>
+
+                <span>
+                    Gestão de Serviços
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <nav class="sidebar-menu">
+
+            <span class="menu-titulo">
+                Principal
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-grid-alt"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="nova-medicao.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-plus-circle"></i>
+
+                <span>
+                    Nova Medição
+                </span>
+
+            </a>
+
+
+            <a
+                href="medicoes.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-file"></i>
+
+                <span>
+                    Medições
+                </span>
+
+            </a>
+
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Gestão
+            </span>
+
+
+            <a
+                href="contratos.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-briefcase-alt-2"></i>
+
+                <span>
+                    Contratos
+                </span>
+
+            </a>
+
+
+            <a
+                href="prestadores.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-building-house"></i>
+
+                <span>
+                    Prestadores
+                </span>
+
+            </a>
+
+
+            <a
+                href="tabelas-precos.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-table"></i>
+
+                <span>
+                    Tabela de preços
+                </span>
+
+            </a>
+
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Administração
+            </span>
+
+
+            <a
+                href="usuarios.html"
+                class="menu-item ativo"
+                data-admin-only
+            >
+
+                <i class="bx bx-user"></i>
+
+                <span>
+                    Usuários
+                </span>
+
+            </a>
+
+
+            <a
+                href="configuracoes.html"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-cog"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <div class="sidebar-rodape">
+
+            <div class="usuario-sidebar">
+
+                <div class="avatar-usuario">
+                    --
+                </div>
+
+                <div class="dados-usuario">
+
+                    <strong>
+                        Carregando...
+                    </strong>
+
+                    <span>
+                        ...
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-area">
+
+
+        <header class="pagina-header">
+
+            <div class="header-esquerda">
+
+                <button
+                    id="btnMenuMobile"
+                    class="btn-menu-mobile"
+                    type="button"
+                >
+
+                    <i class="bx bx-menu"></i>
+
+                </button>
+
+
+                <div>
+
+                    <span>
+                        ORÇAMENTO RÁPIDO
+                    </span>
+
+                    <h1>
+                        Usuários
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="header-direita">
+
+                <div class="header-usuario">
+
+                    <div class="header-avatar">
+                        --
+                    </div>
+
+
+                    <div class="header-dados-usuario">
+
+                        <strong>
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            ...
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="btnSair"
+                    class="btn-sair"
+                    type="button"
+                    title="Sair"
+                >
+
+                    <i class="bx bx-log-out"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <section class="pagina-conteudo">
+
+
+            <!-- =================================================
+                 TOPO
+            ================================================== -->
+
+            <div class="usuarios-topo">
+
+                <div>
+
+                    <span class="subtitulo-pagina">
+                        ADMINISTRAÇÃO
+                    </span>
+
+                    <h2>
+                        Usuários do sistema
+                    </h2>
+
+                    <p>
+                        Gerencie usuários, perfis, permissões e vínculos com prestadores.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="btnNovoUsuario"
+                    class="btn-novo-usuario"
+                    type="button"
+                >
+
+                    <i class="bx bx-user-plus"></i>
+
+                    Novo usuário
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INDICADORES
+            ================================================== -->
+
+            <div class="indicadores-usuarios">
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="indicadorTotal">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-check-circle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Ativos
+                        </span>
+
+                        <strong id="indicadorAtivos">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-shield-quarter"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Administradores
+                        </span>
+
+                        <strong id="indicadorAdministradores">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="indicador-card">
+
+                    <div class="indicador-icone">
+
+                        <i class="bx bx-building-house"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Prestadores
+                        </span>
+
+                        <strong id="indicadorPrestadores">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTROS
+            ================================================== -->
+
+            <div class="usuarios-filtros">
+
+                <div class="campo-pesquisa">
+
+                    <i class="bx bx-search"></i>
+
+                    <input
+                        type="search"
+                        id="inputPesquisa"
+                        placeholder="Pesquisar nome ou e-mail..."
+                    >
+
+                </div>
+
+
+                <select id="filtroPerfil">
+
+                    <option value="">
+                        Todos os perfis
+                    </option>
+
+                    <option value="administrador">
+                        Administradores
+                    </option>
+
+                    <option value="prestador">
+                        Prestadores
+                    </option>
+
+                </select>
+
+
+                <select id="filtroStatus">
+
+                    <option value="">
+                        Todos os status
+                    </option>
+
+                    <option value="ativo">
+                        Ativos
+                    </option>
+
+                    <option value="inativo">
+                        Inativos
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TABELA
+            ================================================== -->
+
+            <section class="usuarios-card">
+
+                <div class="usuarios-card-topo">
+
+                    <div>
+
+                        <h3>
+                            Usuários cadastrados
+                        </h3>
+
+                        <p id="textoQuantidadeUsuarios">
+                            Carregando...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="tabela-wrapper">
+
+                    <table class="tabela-usuarios">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Usuário
+                                </th>
+
+                                <th>
+                                    E-mail
+                                </th>
+
+                                <th>
+                                    Perfil
+                                </th>
+
+                                <th>
+                                    Prestador
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Ações
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="listaUsuarios">
+
+                            <tr>
+
+                                <td colspan="6">
+
+                                    <div class="estado-tabela">
+
+                                        <i class="bx bx-loader-alt bx-spin"></i>
+
+                                        Carregando usuários...
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+></div>
+
+
+
+<!-- =========================================================
+     MODAL EDITAR USUÁRIO
+========================================================= -->
+
+<div
+    id="modalUsuario"
+    class="modal-overlay oculto"
+>
+
+    <div class="modal-usuario">
+
+        <div class="modal-cabecalho">
+
+            <div>
+
+                <span>
+                    USUÁRIO
+                </span>
+
+                <h3>
+                    Editar usuário
+                </h3>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnFecharModal"
+                class="btn-fechar-modal"
+            >
+
+                <i class="bx bx-x"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <form id="formUsuario">
+
+            <input
+                type="hidden"
+                id="usuarioId"
+            >
+
+
+            <div class="form-grid">
+
+                <div class="campo-form campo-form-grande">
+
+                    <label for="nomeUsuario">
+                        Nome *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeUsuario"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form campo-form-grande">
+
+                    <label for="emailUsuario">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailUsuario"
+                        disabled
+                    >
+
+                    <small>
+                        O e-mail de autenticação não é alterado nesta tela.
+                    </small>
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="perfilUsuario">
+                        Perfil *
+                    </label>
+
+                    <select id="perfilUsuario">
+
+                        <option value="administrador">
+                            Administrador
+                        </option>
+
+                        <option value="prestador">
+                            Prestador
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="statusUsuario">
+                        Status
+                    </label>
+
+                    <select id="statusUsuario">
+
+                        <option value="true">
+                            Ativo
+                        </option>
+
+                        <option value="false">
+                            Inativo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div
+                    id="campoPrestador"
+                    class="campo-form campo-form-grande oculto"
+                >
+
+                    <label for="prestadorUsuario">
+                        Prestador vinculado *
+                    </label>
+
+                    <select id="prestadorUsuario">
+
+                        <option value="">
+                            Selecione...
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="usuario-info">
+
+                <i class="bx bx-info-circle"></i>
+
+                <div>
+
+                    <strong>
+                        Conta de acesso
+                    </strong>
+
+                    <span>
+                        Alterações nesta tela modificam o perfil interno do sistema.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="modal-acoes">
+
+                <button
+                    type="button"
+                    id="btnCancelar"
+                    class="btn-cancelar"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="btnSalvarUsuario"
+                    class="btn-salvar"
+                >
+
+                    <i class="bx bx-save"></i>
+
+                    Salvar alterações
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MODAL NOVO USUÁRIO
+========================================================= -->
+
+<div
+    id="modalNovoUsuario"
+    class="modal-overlay oculto"
+>
+
+    <div class="modal-usuario">
+
+        <div class="modal-cabecalho">
+
+            <div>
+
+                <span>
+                    NOVO ACESSO
+                </span>
+
+                <h3>
+                    Cadastrar usuário
+                </h3>
+
+                <p>
+                    Crie uma nova conta de acesso ao Orçamento Rápido.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnFecharNovoUsuario"
+                class="btn-fechar-modal"
+            >
+
+                <i class="bx bx-x"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <form id="formNovoUsuario">
+
+            <div class="form-grid">
+
+                <div class="campo-form campo-form-grande">
+
+                    <label for="novoNome">
+                        Nome completo *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="novoNome"
+                        required
+                        autocomplete="off"
+                        placeholder="Nome do usuário"
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form campo-form-grande">
+
+                    <label for="novoEmail">
+                        E-mail *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="novoEmail"
+                        required
+                        autocomplete="off"
+                        placeholder="usuario@empresa.com"
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="novaSenha">
+                        Senha inicial *
+                    </label>
+
+                    <div class="campo-senha">
+
+                        <input
+                            type="password"
+                            id="novaSenha"
+                            required
+                            minlength="6"
+                            autocomplete="new-password"
+                            placeholder="Mínimo de 6 caracteres"
+                        >
+
+                        <button
+                            type="button"
+                            class="btn-ver-senha"
+                            id="btnVerNovaSenha"
+                            title="Mostrar senha"
+                        >
+
+                            <i class="bx bx-show"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="confirmarNovaSenha">
+                        Confirmar senha *
+                    </label>
+
+                    <div class="campo-senha">
+
+                        <input
+                            type="password"
+                            id="confirmarNovaSenha"
+                            required
+                            minlength="6"
+                            autocomplete="new-password"
+                            placeholder="Repita a senha"
+                        >
+
+                        <button
+                            type="button"
+                            class="btn-ver-senha"
+                            id="btnVerConfirmarSenha"
+                            title="Mostrar senha"
+                        >
+
+                            <i class="bx bx-show"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="novoPerfil">
+                        Perfil *
+                    </label>
+
+                    <select id="novoPerfil">
+
+                        <option value="prestador">
+                            Prestador
+                        </option>
+
+                        <option value="administrador">
+                            Administrador
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="novoStatus">
+                        Status
+                    </label>
+
+                    <select id="novoStatus">
+
+                        <option value="true">
+                            Ativo
+                        </option>
+
+                        <option value="false">
+                            Inativo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div
+                    id="campoNovoPrestador"
+                    class="campo-form campo-form-grande"
+                >
+
+                    <label for="novoPrestador">
+                        Prestador vinculado *
+                    </label>
+
+                    <select id="novoPrestador">
+
+                        <option value="">
+                            Selecione o prestador...
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="usuario-info">
+
+                <i class="bx bx-shield-quarter"></i>
+
+                <div>
+
+                    <strong>
+                        Senha inicial
+                    </strong>
+
+                    <span>
+                        A senha é usada somente para criar a conta no Firebase Authentication e não será armazenada no Firestore.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="modal-acoes">
+
+                <button
+                    type="button"
+                    id="btnCancelarNovoUsuario"
+                    class="btn-cancelar"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="btnCriarUsuario"
+                    class="btn-salvar"
+                >
+
+                    <i class="bx bx-user-plus"></i>
+
+                    Criar usuário
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script
+    type="module"
+    src="../js/authGuard.js"
+></script>
+
+
+<script
+    type="module"
+    src="../js/usuarios.js"
+></script>
+
+
+</body>
+
+</html>
