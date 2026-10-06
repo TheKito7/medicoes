@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Importar Tabela | Orçamento Rápido
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main
+        style="
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+        "
+    >
+
+        <h1>
+            Importar tabela de preços
+        </h1>
+
+        <p
+            style="
+                margin-top: 10px;
+                color: #687783;
+            "
+        >
+            Importação da tabela contratual do Cássio para o Firestore.
+        </p>
+
+
+        <button
+            id="btnImportar"
+            style="
+                margin-top: 30px;
+                height: 45px;
+                padding: 0 20px;
+                border: none;
+                border-radius: 8px;
+                background: #004f92;
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+            "
+        >
+            Importar 360 serviços
+        </button>
+
+
+        <div
+            id="statusImportacao"
+            style="
+                margin-top: 25px;
+                line-height: 1.6;
+            "
+        ></div>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="../js/importarTabela.js"
+    ></script>
+
+</body>
+
+</html>

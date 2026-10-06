@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Medições | Orçamento Rápido
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/medicoes.css"
+    >
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <div class="sidebar-topo">
+
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../imagens/logos/Grupo_Energisa.svg.webp"
+                    alt="Grupo Energisa"
+                >
+
+            </div>
+
+
+            <div class="sidebar-identificacao">
+
+                <strong>
+                    Orçamento Rápido
+                </strong>
+
+                <span>
+                    Gestão de Serviços
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+
+            <span class="menu-titulo">
+                Principal
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-grid-alt"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="nova-medicao.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-plus-circle"></i>
+
+                <span>
+                    Nova Medição
+                </span>
+
+            </a>
+
+
+            <a
+                href="medicoes.html"
+                class="menu-item ativo"
+            >
+
+                <i class="bx bx-file"></i>
+
+                <span>
+                    Medições
+                </span>
+
+            </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Gestão
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-briefcase-alt-2"></i>
+
+                <span>
+                    Contratos
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-building-house"></i>
+
+                <span>
+                    Prestadores
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-table"></i>
+
+                <span>
+                    Tabela de preços
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-map"></i>
+
+                <span>
+                    Unidades
+                </span>
+
+            </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Administração
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-user"></i>
+
+                <span>
+                    Usuários
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-cog"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-rodape">
+
+
+            <div class="usuario-sidebar">
+
+
+                <div class="avatar-usuario">
+                    --
+                </div>
+
+
+                <div class="dados-usuario">
+
+                    <strong>
+                        Carregando...
+                    </strong>
+
+                    <span>
+                        ...
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="main-area">
+
+
+        <!-- HEADER -->
+
+        <header class="pagina-header">
+
+
+            <div class="header-esquerda">
+
+
+                <button
+                    id="btnMenuMobile"
+                    class="btn-menu-mobile"
+                    type="button"
+                >
+
+                    <i class="bx bx-menu"></i>
+
+                </button>
+
+
+                <div>
+
+                    <span>
+                        ORÇAMENTO RÁPIDO
+                    </span>
+
+                    <h1>
+                        Medições
+                    </h1>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="header-direita">
+
+
+                <div class="header-usuario">
+
+
+                    <div class="header-avatar">
+                        --
+                    </div>
+
+
+                    <div class="header-dados-usuario">
+
+                        <strong>
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            ...
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    id="btnSair"
+                    class="btn-sair"
+                    type="button"
+                    title="Sair"
+                >
+
+                    <i class="bx bx-log-out"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- CONTEÚDO -->
+
+        <section class="pagina-conteudo">
+
+
+            <div class="pagina-topo">
+
+
+                <div>
+
+                    <span class="pagina-etapa">
+                        CONTROLE DE MEDIÇÕES
+                    </span>
+
+                    <h2>
+                        Medições registradas
+                    </h2>
+
+                    <p>
+                        Consulte rascunhos, medições enviadas e registros em análise.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="nova-medicao.html"
+                    class="btn-nova-medicao"
+                >
+
+                    <i class="bx bx-plus"></i>
+
+                    Nova medição
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- INDICADORES -->
+
+            <section class="indicadores-medicoes">
+
+
+                <div class="indicador">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="indicadorTotal">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="indicador">
+
+                    <span>
+                        Rascunhos
+                    </span>
+
+                    <strong id="indicadorRascunhos">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="indicador">
+
+                    <span>
+                        Aguardando análise
+                    </span>
+
+                    <strong id="indicadorEnviadas">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="indicador">
+
+                    <span>
+                        Valor total
+                    </span>
+
+                    <strong id="indicadorValor">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- FILTROS -->
+
+            <section class="card-filtros">
+
+
+                <div class="campo-pesquisa">
+
+                    <i class="bx bx-search"></i>
+
+                    <input
+                        type="text"
+                        id="pesquisaMedicao"
+                        placeholder="Pesquisar por prestador, cidade, unidade ou contrato..."
+                    >
+
+                </div>
+
+
+                <select id="filtroStatus">
+
+                    <option value="">
+                        Todos os status
+                    </option>
+
+                    <option value="rascunho">
+                        Rascunho
+                    </option>
+
+                    <option value="enviado">
+                        Aguardando análise
+                    </option>
+
+                    <option value="em_analise">
+                        Em análise
+                    </option>
+
+                    <option value="aprovado">
+                        Aprovado
+                    </option>
+
+                    <option value="correcao">
+                        Correção solicitada
+                    </option>
+
+                    <option value="reprovado">
+                        Reprovado
+                    </option>
+
+                </select>
+
+
+            </section>
+
+
+
+            <!-- TABELA -->
+
+            <section class="card-listagem">
+
+
+                <div class="tabela-wrapper">
+
+
+                    <table class="tabela-medicoes">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Medição
+                                </th>
+
+                                <th>
+                                    Prestador
+                                </th>
+
+                                <th>
+                                    Localidade
+                                </th>
+
+                                <th>
+                                    Data
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Valor
+                                </th>
+
+                                <th>
+                                    Ações
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="corpoTabelaMedicoes">
+
+
+                            <tr>
+
+                                <td
+                                    colspan="7"
+                                    class="carregando"
+                                >
+                                    Carregando medições...
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+                <div
+                    id="estadoVazio"
+                    class="estado-vazio oculto"
+                >
+
+                    <i class="bx bx-file"></i>
+
+                    <strong>
+                        Nenhuma medição encontrada
+                    </strong>
+
+                    <p>
+                        Os registros aparecerão aqui quando forem cadastrados.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+></div>
+
+
+<script
+    type="module"
+    src="../js/authGuard.js"
+></script>
+
+<script
+    type="module"
+    src="../js/medicoes.js"
+></script>
+
+
+</body>
+
+</html>

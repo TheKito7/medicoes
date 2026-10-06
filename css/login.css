@@ -1,0 +1,1130 @@
+/* =========================================================
+   ORÇAMENTO RÁPIDO - ENERGISA
+   LOGIN
+========================================================= */
+
+
+/* =========================================================
+   ESTRUTURA PRINCIPAL
+========================================================= */
+
+.login-body {
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+}
+
+
+.login-container {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr
+        0.95fr;
+
+}
+
+
+/* =========================================================
+   LADO ESQUERDO
+========================================================= */
+
+.login-apresentacao {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 70px 8%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #003e72 0%,
+            #005f9c 55%,
+            #008fa5 100%
+        );
+
+}
+
+
+.login-apresentacao::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    right: -180px;
+    top: -130px;
+
+}
+
+
+.login-apresentacao::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 340px;
+    height: 340px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    border-radius: 50%;
+
+    left: -160px;
+    bottom: -160px;
+
+}
+
+
+.login-apresentacao-conteudo {
+
+    width: 100%;
+
+    max-width: 610px;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.marca-sistema {
+
+    margin-bottom: 70px;
+
+}
+
+
+.logo-energisa {
+
+    display: block;
+
+    width: 190px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================================
+   TEXTO APRESENTAÇÃO
+========================================================= */
+
+.apresentacao-texto {
+
+    color: var(--branco);
+
+}
+
+
+.sistema-tag {
+
+    display: inline-flex;
+
+    padding: 7px 13px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(255, 255, 255, 0.13);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.17);
+
+    font-size: 0.73rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.apresentacao-texto h1 {
+
+    font-size:
+        clamp(
+            2.6rem,
+            5vw,
+            4.5rem
+        );
+
+    font-weight: 300;
+
+    line-height: 1.04;
+
+    letter-spacing: -2.5px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.apresentacao-texto h1 strong {
+
+    display: block;
+
+    font-weight: 700;
+
+}
+
+
+.apresentacao-texto p {
+
+    max-width: 540px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.75;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.83
+        );
+
+}
+
+
+/* =========================================================
+   RECURSOS DO LOGIN
+========================================================= */
+
+.recursos-login {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-top: 55px;
+
+}
+
+
+.recurso-login {
+
+    min-height: 145px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(8px);
+
+}
+
+
+.recurso-login > i {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.13);
+
+    color: var(--branco);
+
+    font-size: 1.35rem;
+
+}
+
+
+.recurso-login div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.recurso-login strong {
+
+    color: var(--branco);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+}
+
+
+.recurso-login span {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.67
+        );
+
+    font-size: 0.75rem;
+
+    line-height: 1.45;
+
+}
+
+
+/* =========================================================
+   DECORAÇÃO
+========================================================= */
+
+.login-decoracao {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+.login-decoracao-1 {
+
+    width: 240px;
+    height: 240px;
+
+    right: 5%;
+    bottom: -150px;
+
+    background:
+        rgba(
+            84,
+            190,
+            73,
+            0.14
+        );
+
+}
+
+
+.login-decoracao-2 {
+
+    width: 90px;
+    height: 90px;
+
+    right: 12%;
+    top: 12%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.05
+        );
+
+}
+
+
+/* =========================================================
+   ÁREA FORMULÁRIO
+========================================================= */
+
+.login-area {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 7%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f7fafb 100%
+        );
+
+}
+
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 450px;
+
+}
+
+
+.login-mobile-logo {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO LOGIN
+========================================================= */
+
+.login-cabecalho {
+
+    margin-bottom: 38px;
+
+}
+
+
+.login-subtitulo {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color:
+        var(--azul-principal);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.login-cabecalho h2 {
+
+    color: var(--cinza-900);
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+    font-weight: 650;
+
+    letter-spacing: -0.7px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.login-cabecalho p {
+
+    color: var(--cinza-500);
+
+    font-size: 0.93rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+.form-login {
+
+    width: 100%;
+
+}
+
+
+.campo-formulario {
+
+    margin-bottom: 21px;
+
+}
+
+
+.campo-formulario label {
+
+    display: block;
+
+    color: var(--cinza-700);
+
+    font-size: 0.83rem;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+
+.campo-input {
+
+    width: 100%;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    border:
+        1px solid
+        var(--cinza-300);
+
+    border-radius: 9px;
+
+    background:
+        var(--branco);
+
+    transition:
+        0.2s ease;
+
+}
+
+
+.campo-input:focus-within {
+
+    border-color:
+        var(--azul-principal);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            0,
+            79,
+            146,
+            0.09
+        );
+
+}
+
+
+.campo-input > i {
+
+    width: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--cinza-500);
+
+    font-size: 1.2rem;
+
+}
+
+
+.campo-input:focus-within > i {
+
+    color:
+        var(--azul-principal);
+
+}
+
+
+.campo-input input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding:
+        0
+        8px
+        0
+        0;
+
+    background:
+        transparent;
+
+    color:
+        var(--cinza-800);
+
+    font-size: 0.92rem;
+
+}
+
+
+.campo-input input::placeholder {
+
+    color: #9da8af;
+
+}
+
+
+/* =========================================================
+   MOSTRAR SENHA
+========================================================= */
+
+.btn-mostrar-senha {
+
+    width: 48px;
+
+    height: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--cinza-500);
+
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-mostrar-senha:hover {
+
+    color:
+        var(--azul-principal);
+
+}
+
+
+/* =========================================================
+   BOTÃO ENTRAR
+========================================================= */
+
+.btn-entrar {
+
+    width: 100%;
+
+    height: 53px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--azul-principal),
+            #0075a9
+        );
+
+    color: var(--branco);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 0.92rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px
+        rgba(
+            0,
+            79,
+            146,
+            0.17
+        );
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.btn-entrar i {
+
+    font-size: 1.3rem;
+
+}
+
+
+.btn-entrar:hover {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 11px 25px
+        rgba(
+            0,
+            79,
+            146,
+            0.23
+        );
+
+}
+
+
+.btn-entrar:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+.btn-entrar.carregando {
+
+    cursor: wait;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================================================
+   MENSAGEM
+========================================================= */
+
+.mensagem-login {
+
+    display: none;
+
+    margin:
+        -6px
+        0
+        15px;
+
+    padding:
+        10px
+        12px;
+
+    border-radius: 7px;
+
+    font-size: 0.8rem;
+
+    line-height: 1.4;
+
+}
+
+
+.mensagem-login.erro {
+
+    display: block;
+
+    color: #a62e2e;
+
+    background: #fff0f0;
+
+    border:
+        1px solid
+        #ffd3d3;
+
+}
+
+
+/* =========================================================
+   AVISO
+========================================================= */
+
+.login-aviso {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    margin-top: 28px;
+
+    padding: 14px 15px;
+
+    border-radius: 8px;
+
+    background:
+        var(--azul-claro);
+
+}
+
+
+.login-aviso i {
+
+    color:
+        var(--azul-principal);
+
+    font-size: 1.3rem;
+
+    margin-top: 1px;
+
+}
+
+
+.login-aviso p {
+
+    color:
+        var(--cinza-600);
+
+    font-size: 0.76rem;
+
+    line-height: 1.55;
+
+}
+
+
+/* =========================================================
+   RODAPÉ LOGIN
+========================================================= */
+
+.login-rodape {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 28px;
+
+    color: #8a969d;
+
+    font-size: 0.68rem;
+
+}
+
+
+.separador-rodape {
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background:
+        var(--cinza-300);
+
+}
+
+
+/* =========================================================
+   RESPONSIVO - 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .login-container {
+
+        grid-template-columns:
+            0.9fr
+            1.1fr;
+
+    }
+
+
+    .login-apresentacao {
+
+        padding:
+            55px
+            7%;
+
+    }
+
+
+    .recursos-login {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .recurso-login {
+
+        min-height: auto;
+
+        flex-direction: row;
+
+        align-items: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO - 820px
+========================================================= */
+
+@media (max-width: 820px) {
+
+    .login-body {
+
+        background:
+            linear-gradient(
+                180deg,
+                #eef7fb,
+                #ffffff
+            );
+
+    }
+
+
+    .login-container {
+
+        display: block;
+
+        min-height: 100vh;
+
+    }
+
+
+    .login-apresentacao {
+
+        display: none;
+
+    }
+
+
+    .login-area {
+
+        min-height: 100vh;
+
+        padding:
+            36px
+            22px
+            30px;
+
+    }
+
+
+    .login-card {
+
+        max-width: 430px;
+
+    }
+
+
+    .login-mobile-logo {
+
+        display: flex;
+
+        align-items: center;
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .login-mobile-logo img {
+
+        width: 155px;
+
+        max-width: 100%;
+
+    }
+
+
+    .login-cabecalho {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .login-cabecalho h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .login-area {
+
+        align-items: flex-start;
+
+        padding:
+            28px
+            18px
+            25px;
+
+    }
+
+
+    .login-mobile-logo {
+
+        margin-bottom: 38px;
+
+    }
+
+
+    .login-mobile-logo img {
+
+        width: 140px;
+
+    }
+
+
+    .login-subtitulo {
+
+        font-size: 0.67rem;
+
+    }
+
+
+    .login-cabecalho h2 {
+
+        font-size: 1.65rem;
+
+    }
+
+
+    .login-cabecalho p {
+
+        font-size: 0.86rem;
+
+    }
+
+
+    .campo-input {
+
+        height: 54px;
+
+    }
+
+
+    .btn-entrar {
+
+        height: 54px;
+
+    }
+
+
+    .login-rodape {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   TELAS BAIXAS
+========================================================= */
+
+@media (
+    max-height: 680px
+)
+and
+(
+    min-width: 821px
+) {
+
+    .login-apresentacao,
+    .login-area {
+
+        padding-top: 35px;
+
+        padding-bottom: 35px;
+
+    }
+
+
+    .marca-sistema {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .recursos-login {
+
+        margin-top: 30px;
+
+    }
+
+}

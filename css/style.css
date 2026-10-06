@@ -1,0 +1,148 @@
+/* =========================================================
+   ORÇAMENTO RÁPIDO - ENERGISA
+   ESTILOS GLOBAIS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+
+    --azul-principal: #004f92;
+    --azul-escuro: #003b6f;
+    --azul-claro: #eaf4fb;
+
+    --verde-principal: #42a846;
+    --verde-claro: #edf8ed;
+
+    --ciano: #00a4b4;
+
+    --branco: #ffffff;
+
+    --cinza-50: #f8fafc;
+    --cinza-100: #f2f5f7;
+    --cinza-200: #e3e9ed;
+    --cinza-300: #ced7dd;
+
+    --cinza-500: #687783;
+    --cinza-600: #52616b;
+    --cinza-700: #364650;
+    --cinza-800: #263640;
+    --cinza-900: #16252e;
+
+    --erro: #c83b3b;
+    --sucesso: #32813c;
+    --aviso: #d49722;
+
+    --sombra-suave:
+        0 10px 35px rgba(18, 41, 54, 0.08);
+
+    --sombra-card:
+        0 18px 50px rgba(8, 35, 52, 0.12);
+
+    --raio: 12px;
+}
+
+
+/* =========================================================
+   HTML / BODY
+========================================================= */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    color: var(--cinza-800);
+
+    background: var(--cinza-50);
+
+}
+
+
+/* =========================================================
+   ELEMENTOS GERAIS
+========================================================= */
+
+button,
+input,
+select,
+textarea {
+
+    font-family: inherit;
+
+}
+
+button {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+a {
+
+    color: inherit;
+
+}
+
+img {
+
+    max-width: 100%;
+
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 7px;
+    height: 7px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #c5d0d6;
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #aebbc2;
+
+}

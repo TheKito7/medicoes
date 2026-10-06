@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Dashboard | Orçamento Rápido
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<div class="dashboard-layout">
+
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <div class="sidebar-topo">
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../imagens/logos/Grupo_Energisa.svg.webp"
+                    alt="Grupo Energisa"
+                >
+
+            </div>
+
+
+            <div class="sidebar-identificacao">
+
+                <strong>
+                    Orçamento Rápido
+                </strong>
+
+                <span>
+                    Gestão de Serviços
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+
+            <span class="menu-titulo">
+                Principal
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item ativo"
+            >
+
+                <i class="bx bx-grid-alt"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="nova-medicao.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-plus-circle"></i>
+
+                <span>
+                    Nova Medição
+                </span>
+
+            </a>
+
+
+            <a
+            href="medicoes.html"
+            class="menu-item"
+        >
+            <i class="bx bx-file"></i>
+        
+            <span>
+                Medições
+            </span>
+        </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Gestão
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-briefcase-alt-2"></i>
+
+                <span>
+                    Contratos
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-building-house"></i>
+
+                <span>
+                    Prestadores
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-table"></i>
+
+                <span>
+                    Tabela de preços
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-map"></i>
+
+                <span>
+                    Unidades
+                </span>
+
+            </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Administração
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-user"></i>
+
+                <span>
+                    Usuários
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-cog"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-rodape">
+
+            <div class="usuario-sidebar">
+
+                <div class="avatar-usuario">
+                    --
+                </div>
+
+                <div class="dados-usuario">
+
+                    <strong>
+                        Carregando...
+                    </strong>
+
+                    <span>
+                        ...
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+
+            <div class="header-esquerda">
+
+
+                <button
+                    type="button"
+                    id="btnMenuMobile"
+                    class="btn-menu-mobile"
+                >
+
+                    <i class="bx bx-menu"></i>
+
+                </button>
+
+
+                <div>
+
+                    <span class="header-localizacao">
+                        Orçamento Rápido
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="header-direita">
+
+
+                <button
+                    class="btn-header"
+                    type="button"
+                    title="Notificações"
+                >
+
+                    <i class="bx bx-bell"></i>
+
+                    <span class="indicador-notificacao"></span>
+
+                </button>
+
+
+                <div class="header-usuario">
+
+                    <div class="header-avatar">
+                        --
+                    </div>
+
+                    <div class="header-dados-usuario">
+
+                        <strong>
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            ...
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="btnSair"
+                    class="btn-sair"
+                    title="Sair"
+                >
+
+                    <i class="bx bx-log-out"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+        <section class="dashboard-conteudo">
+
+
+            <div class="dashboard-apresentacao">
+
+
+                <div>
+
+                    <span
+                        class="dashboard-data"
+                        id="dataAtual"
+                    >
+                        -
+                    </span>
+
+
+                    <h2>
+
+                        Olá,
+                        <span id="saudacaoNome">
+                            usuário
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Acompanhe as medições,
+                        análises e serviços registrados.
+
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="nova-medicao.html"
+                    class="btn-nova-medicao"
+                >
+
+                    <i class="bx bx-plus"></i>
+
+                    Nova medição
+
+                </a>
+
+
+            </div>
+
+
+            <div class="dashboard-cards">
+
+
+                <article class="dashboard-card">
+
+                    <div class="card-topo">
+
+                        <div class="card-icone card-icone-azul">
+
+                            <i class="bx bx-file"></i>
+
+                        </div>
+
+                        <span class="card-periodo">
+                            Total
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-conteudo">
+
+                        <span class="card-label">
+                            Medições
+                        </span>
+
+                        <strong
+                            class="card-valor"
+                            id="totalMedicoes"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="card-rodape">
+
+                        Registros do sistema
+
+                    </div>
+
+                </article>
+
+
+                <article class="dashboard-card">
+
+                    <div class="card-topo">
+
+                        <div class="card-icone card-icone-amarelo">
+
+                            <i class="bx bx-time-five"></i>
+
+                        </div>
+
+                        <span class="card-periodo">
+                            Atual
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-conteudo">
+
+                        <span class="card-label">
+                            Em análise
+                        </span>
+
+                        <strong
+                            class="card-valor"
+                            id="totalAnalise"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="card-rodape">
+
+                        Aguardando conferência
+
+                    </div>
+
+                </article>
+
+
+                <article class="dashboard-card">
+
+                    <div class="card-topo">
+
+                        <div class="card-icone card-icone-verde">
+
+                            <i class="bx bx-check-circle"></i>
+
+                        </div>
+
+                        <span class="card-periodo">
+                            Total
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-conteudo">
+
+                        <span class="card-label">
+                            Aprovadas
+                        </span>
+
+                        <strong
+                            class="card-valor"
+                            id="totalAprovadas"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="card-rodape">
+
+                        Medições concluídas
+
+                    </div>
+
+                </article>
+
+
+                <article class="dashboard-card">
+
+                    <div class="card-topo">
+
+                        <div class="card-icone card-icone-ciano">
+
+                            <i class="bx bx-dollar-circle"></i>
+
+                        </div>
+
+                        <span class="card-periodo">
+                            Total
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-conteudo">
+
+                        <span class="card-label">
+                            Valor medido
+                        </span>
+
+                        <strong
+                            class="card-valor card-valor-financeiro"
+                            id="valorMedido"
+                        >
+                            R$ 0,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="card-rodape">
+
+                        Soma das medições
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+
+                <section class="dashboard-painel">
+
+
+                    <div class="painel-cabecalho">
+
+                        <div>
+
+                            <h3>
+                                Últimas medições
+                            </h3>
+
+                            <p>
+                                Registros recentes do sistema.
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="link-ver-todos"
+                        >
+
+                            Ver todas
+
+                            <i class="bx bx-right-arrow-alt"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="tabela-dashboard-wrapper">
+
+
+                        <table class="tabela-dashboard">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Medição
+                                    </th>
+
+                                    <th>
+                                        Unidade
+                                    </th>
+
+                                    <th>
+                                        Data
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Valor
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tabelaUltimasMedicoes">
+
+
+                                <tr class="tabela-vazia">
+
+                                    <td colspan="5">
+
+                                        <div class="estado-vazio">
+
+                                            <div class="estado-vazio-icone">
+
+                                                <i class="bx bx-file"></i>
+
+                                            </div>
+
+                                            <strong>
+                                                Nenhuma medição registrada
+                                            </strong>
+
+                                            <span>
+                                                As medições aparecerão aqui.
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <section class="dashboard-painel">
+
+
+                    <div class="painel-cabecalho">
+
+                        <div>
+
+                            <h3>
+                                Visão rápida
+                            </h3>
+
+                            <p>
+                                Situação das medições.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="resumo-status">
+
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-info">
+
+                                <span
+                                    class="
+                                        status-bolinha
+                                        status-rascunho
+                                    "
+                                ></span>
+
+                                Rascunhos
+
+                            </div>
+
+                            <strong id="resumoRascunho">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-info">
+
+                                <span
+                                    class="
+                                        status-bolinha
+                                        status-enviado
+                                    "
+                                ></span>
+
+                                Enviadas
+
+                            </div>
+
+                            <strong id="resumoEnviado">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-info">
+
+                                <span
+                                    class="
+                                        status-bolinha
+                                        status-analise
+                                    "
+                                ></span>
+
+                                Em análise
+
+                            </div>
+
+                            <strong id="resumoAnalise">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-info">
+
+                                <span
+                                    class="
+                                        status-bolinha
+                                        status-correcao
+                                    "
+                                ></span>
+
+                                Correção
+
+                            </div>
+
+                            <strong id="resumoCorrecao">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-info">
+
+                                <span
+                                    class="
+                                        status-bolinha
+                                        status-aprovado
+                                    "
+                                ></span>
+
+                                Aprovadas
+
+                            </div>
+
+                            <strong id="resumoAprovado">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="atalho-medicao">
+
+                        <div class="atalho-medicao-icone">
+
+                            <i class="bx bx-plus-circle"></i>
+
+                        </div>
+
+
+                        <div class="atalho-medicao-conteudo">
+
+                            <strong>
+                                Registrar novo serviço
+                            </strong>
+
+                            <p>
+
+                                Crie uma nova medição
+                                utilizando a tabela
+                                contratual.
+
+                            </p>
+
+                            <a href="nova-medicao.html">
+
+                                Nova medição
+
+                                <i class="bx bx-right-arrow-alt"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+<script
+    type="module"
+    src="../js/authGuard.js"
+></script>
+
+<script
+    type="module"
+    src="../js/dashboard.js"
+></script>
+
+
+</body>
+
+</html>

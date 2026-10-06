@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Nova Medição | Orçamento Rápido
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/nova-medicao.css"
+    >
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="medicao-body">
+
+
+<div class="medicao-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <div class="sidebar-topo">
+
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../imagens/logos/Grupo_Energisa.svg.webp"
+                    alt="Grupo Energisa"
+                >
+
+            </div>
+
+
+            <div class="sidebar-identificacao">
+
+                <strong>
+                    Orçamento Rápido
+                </strong>
+
+                <span>
+                    Gestão de Serviços
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+
+            <span class="menu-titulo">
+                Principal
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+
+                <i class="bx bx-grid-alt"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="nova-medicao.html"
+                class="menu-item ativo"
+            >
+
+                <i class="bx bx-plus-circle"></i>
+
+                <span>
+                    Nova Medição
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+            >
+
+                <i class="bx bx-file"></i>
+
+                <span>
+                    Medições
+                </span>
+
+            </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Gestão
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-briefcase-alt-2"></i>
+
+                <span>
+                    Contratos
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-building-house"></i>
+
+                <span>
+                    Prestadores
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-table"></i>
+
+                <span>
+                    Tabela de preços
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-map"></i>
+
+                <span>
+                    Unidades
+                </span>
+
+            </a>
+
+
+            <span
+                class="menu-titulo"
+                data-admin-only
+            >
+                Administração
+            </span>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-user"></i>
+
+                <span>
+                    Usuários
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                data-admin-only
+            >
+
+                <i class="bx bx-cog"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-rodape">
+
+
+            <div class="usuario-sidebar">
+
+
+                <div class="avatar-usuario">
+                    --
+                </div>
+
+
+                <div class="dados-usuario">
+
+                    <strong>
+                        Carregando...
+                    </strong>
+
+                    <span>
+                        ...
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <main class="medicao-main">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="medicao-header">
+
+
+            <div class="header-esquerda">
+
+
+                <button
+                    id="btnMenuMobile"
+                    class="btn-menu-mobile"
+                    type="button"
+                >
+
+                    <i class="bx bx-menu"></i>
+
+                </button>
+
+
+                <div>
+
+                    <span class="header-localizacao">
+                        Orçamento Rápido
+                    </span>
+
+                    <h1>
+                        Nova Medição
+                    </h1>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="header-direita">
+
+
+                <div class="header-usuario">
+
+
+                    <div class="header-avatar">
+                        --
+                    </div>
+
+
+                    <div class="header-dados-usuario">
+
+                        <strong>
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            ...
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    id="btnSair"
+                    class="btn-sair"
+                    type="button"
+                    title="Sair"
+                >
+
+                    <i class="bx bx-log-out"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <section class="medicao-conteudo">
+
+
+            <div class="pagina-topo">
+
+
+                <div>
+
+                    <span class="pagina-etapa">
+                        NOVA MEDIÇÃO
+                    </span>
+
+
+                    <h2>
+                        Registrar serviços executados
+                    </h2>
+
+
+                    <p>
+
+                        Informe os dados da visita e adicione os
+                        serviços executados conforme a tabela
+                        vinculada ao contrato.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DADOS DA MEDIÇÃO
+            ================================================== -->
+
+            <section class="medicao-card">
+
+
+                <div class="card-cabecalho">
+
+
+                    <div class="card-cabecalho-icone">
+
+                        <i class="bx bx-file"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Dados da medição
+                        </h3>
+
+                        <p>
+                            Informações gerais do serviço realizado.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="campo-medicao">
+
+                        <label for="prestador">
+                            Prestador
+                        </label>
+
+                        <select
+                            id="prestador"
+                            disabled
+                        >
+
+                            <option value="">
+                                Carregando prestadores...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="campo-medicao">
+
+                        <label for="contrato">
+                            Contrato
+                        </label>
+
+                        <select
+                            id="contrato"
+                            disabled
+                        >
+
+                            <option value="">
+                                Selecione um prestador
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="campo-medicao">
+
+                        <label for="cidade">
+                            Cidade
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cidade"
+                            placeholder="Ex.: Aracaju"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo-medicao">
+
+                        <label for="localidade">
+                            Localidade / Unidade
+                        </label>
+
+                        <input
+                            type="text"
+                            id="localidade"
+                            placeholder="Ex.: Agência Siqueira Campos"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo-medicao">
+
+                        <label for="responsavel">
+                            Responsável pela solicitação
+                        </label>
+
+                        <input
+                            type="text"
+                            id="responsavel"
+                            placeholder="Nome do responsável"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo-medicao">
+
+                        <label for="dataServico">
+                            Data do serviço
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dataServico"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo-medicao campo-largo">
+
+                        <label for="descricaoGeral">
+                            Descrição geral
+                        </label>
+
+                        <textarea
+                            id="descricaoGeral"
+                            rows="3"
+                            placeholder="Descreva resumidamente o serviço realizado..."
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ADICIONAR SERVIÇO
+            ================================================== -->
+
+            <section class="medicao-card">
+
+
+                <div class="card-cabecalho">
+
+
+                    <div class="card-cabecalho-icone">
+
+                        <i class="bx bx-search"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Adicionar serviço
+                        </h3>
+
+                        <p>
+                            Pesquise pela descrição ou código do item.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="servico-pesquisa-area">
+
+
+                    <div class="campo-medicao campo-pesquisa">
+
+
+                        <label for="pesquisaServico">
+                            Serviço contratual
+                        </label>
+
+
+                        <div class="input-pesquisa">
+
+
+                            <i class="bx bx-search"></i>
+
+
+                            <input
+                                type="text"
+                                id="pesquisaServico"
+                                autocomplete="off"
+                                placeholder="Selecione um contrato primeiro..."
+                                disabled
+                            >
+
+
+                            <button
+                                type="button"
+                                id="btnLimparPesquisa"
+                                class="btn-limpar-pesquisa"
+                                title="Limpar pesquisa"
+                            >
+
+                                <i class="bx bx-x"></i>
+
+                            </button>
+
+
+                        </div>
+
+
+                        <div
+                            id="resultadosPesquisa"
+                            class="resultados-pesquisa"
+                        ></div>
+
+
+                    </div>
+
+
+                    <div
+                        id="mensagemTabela"
+                        class="mensagem-tabela"
+                    >
+                        Selecione o prestador e o contrato.
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =============================================
+                     SERVIÇO SELECIONADO
+                ============================================== -->
+
+                <div
+                    id="servicoSelecionado"
+                    class="servico-selecionado oculto"
+                >
+
+
+                    <div class="servico-selecionado-topo">
+
+
+                        <div>
+
+
+                            <span class="servico-codigo">
+                                ITEM CONTRATUAL
+                            </span>
+
+
+                            <h4 id="nomeServicoSelecionado">
+                                -
+                            </h4>
+
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="btnRemoverSelecao"
+                            class="btn-remover-selecao"
+                            title="Cancelar seleção"
+                        >
+
+                            <i class="bx bx-x"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <div class="servico-dados">
+
+
+                        <div class="servico-dado">
+
+                            <span>
+                                Código Energisa
+                            </span>
+
+                            <strong id="codigoEnergisaSelecionado">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="servico-dado">
+
+                            <span>
+                                Código PINI
+                            </span>
+
+                            <strong id="codigoPiniSelecionado">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="servico-dado">
+
+                            <span>
+                                Unidade
+                            </span>
+
+                            <strong id="unidadeSelecionada">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="servico-dado">
+
+                            <span>
+                                Valor unitário
+                            </span>
+
+                            <strong
+                                id="valorUnitarioSelecionado"
+                                class="valor-destaque"
+                            >
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="quantidade-area">
+
+
+                        <div class="campo-medicao">
+
+
+                            <label for="quantidadeServico">
+
+                                Quantidade
+
+                                <span
+                                    id="unidadeQuantidade"
+                                    class="label-unidade"
+                                ></span>
+
+                            </label>
+
+
+                            <input
+                                type="number"
+                                id="quantidadeServico"
+                                min="0"
+                                step="0.01"
+                                placeholder="0,00"
+                            >
+
+
+                        </div>
+
+
+
+                        <div class="subtotal-item">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="subtotalServico">
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+
+
+                        <button
+                            type="button"
+                            id="btnAdicionarItem"
+                            class="btn-adicionar-item"
+                        >
+
+                            <i class="bx bx-plus"></i>
+
+                            Adicionar serviço
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ITENS
+            ================================================== -->
+
+            <section class="medicao-card">
+
+
+                <div class="card-cabecalho card-cabecalho-lista">
+
+
+                    <div class="card-cabecalho-grupo">
+
+
+                        <div class="card-cabecalho-icone">
+
+                            <i class="bx bx-list-ul"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Serviços adicionados
+                            </h3>
+
+                            <p>
+                                Itens que farão parte desta medição.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <span
+                        id="contadorItens"
+                        class="contador-itens"
+                    >
+                        0 itens
+                    </span>
+
+
+                </div>
+
+
+
+                <div
+                    id="listaItens"
+                    class="lista-itens"
+                >
+
+
+                    <div
+                        id="estadoVazioItens"
+                        class="estado-vazio-itens"
+                    >
+
+
+                        <div class="estado-vazio-icone">
+
+                            <i class="bx bx-receipt"></i>
+
+                        </div>
+
+
+                        <strong>
+                            Nenhum serviço adicionado
+                        </strong>
+
+
+                        <p>
+                            Pesquise um item contratual e informe a quantidade.
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESUMO
+            ================================================== -->
+
+            <section class="resumo-medicao">
+
+
+                <div class="resumo-medicao-info">
+
+
+                    <span>
+                        Total da medição
+                    </span>
+
+
+                    <strong id="valorTotalMedicao">
+                        R$ 0,00
+                    </strong>
+
+
+                    <small id="resumoQuantidadeItens">
+                        Nenhum item adicionado
+                    </small>
+
+
+                </div>
+
+
+                <div class="acoes-medicao">
+
+
+                    <button
+                        type="button"
+                        id="btnSalvarRascunho"
+                        class="btn-secundario"
+                    >
+
+                        <i class="bx bx-save"></i>
+
+                        Salvar rascunho
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="btnEnviarMedicao"
+                        class="btn-principal"
+                    >
+
+                        <i class="bx bx-send"></i>
+
+                        Enviar medição
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+></div>
+
+
+
+<script
+    type="module"
+    src="../js/authGuard.js"
+></script>
+
+
+<script
+    type="module"
+    src="../js/novaMedicao.js"
+></script>
+
+
+</body>
+
+</html>
